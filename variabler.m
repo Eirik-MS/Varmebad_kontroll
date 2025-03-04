@@ -1,15 +1,15 @@
-m    = 32     % kg vann i beholderen              [kg]
-cp   = 4184   % spesifik varmekapasitet i vann    [J/(kg·K)]
-Tomg = 20     % temperatur omgivelser             [K]
+m    = 32             ;% kg vann i beholderen              [kg]
+cp   = 4184           ;% spesifik varmekapasitet i vann    [J/(kg·K)]
+Tomg = 20             ;% temperatur omgivelser             [K]
 
-P0   = 500    % maksimalt pådrag fra varmeelement [W]
-H    = 10.59  % varmeutvekslingskoeffisienten     [W/K]
+P0   = 500            ;% maksimalt pådrag fra varmeelement [W]
+H    = 10.59          ;% varmeutvekslingskoeffisienten     [W/K]
 
 
 
-a   = -H/(m*cp)
-b   = 1/(m*cp)
-c   = H/(m*cp)*Tomg
+a   = -H/(m*cp)       ;
+b   = 1/(m*cp)        ;
+c   = H/(m*cp)*Tomg   ;
 
-tau = - 1/a
-K   = - b/a
+tau = - 1/a           ;
+K   = - b/a           ;
