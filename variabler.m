@@ -7,16 +7,16 @@ T_0  = Tomg           ;% Initial temperature of the water bath (°C)
 
 P0   = 1500           ;% maksimalt pådrag fra varmeelement [W]
 H    = 10.59          ;% varmeutvekslingskoeffisienten     [W/K]
-f    = 50             ;% PWM frekvens
+f    = 20             ;% PWM frekvens
 
-Kp   = 5              ;% Proportional gain
+Kp   = 30              ;% Proportional gain
 Ki   = 5              ;% Integral gain
 Kd   = 1              ;% Derivative gain
 
 
 a   = -H/(m*cp)       ;
 b   =  1/(m*cp)       ;
-a = a*10000; b = b*10000;
+a = a*10000; b = b*10000;  % disse var veldig små, systemet ville ikke gjøre noe
 c   =  H/(m*cp)*Tomg  ;
 
 tau = - 1/a           ;
