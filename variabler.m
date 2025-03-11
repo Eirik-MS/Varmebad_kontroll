@@ -1,22 +1,22 @@
-m    = 32             ;% kg vann i beholderen              [kg]
+m    = 6.9            ;% kg vann i beholderen              [kg]
 cp   = 4184           ;% spesifik varmekapasitet i vann    [J/(kg·K)]
-Tomg = 20             ;% temperatur omgivelser             [K]
+Tomg = 20        ;% temperatur omgivelser             [K]
 
-T_a  = 38             ;% Desired temperature (°C)
+T_a  = 38        ;% Desired temperature (°C)
 T_0  = Tomg           ;% Initial temperature of the water bath (°C)
 
-P0   = 1500           ;% maksimalt pådrag fra varmeelement [W]
+P0   = 800            ;% maksimalt pådrag fra varmeelement [W]
 H    = 10.59          ;% varmeutvekslingskoeffisienten     [W/K]
-f    = 20             ;% PWM frekvens
+f    = 0.5              ;% PWM frekvens
 
-Kp   = 30              ;% Proportional gain
-Ki   = 5              ;% Integral gain
-Kd   = 1              ;% Derivative gain
+Kp   = 100             ;% Proportional gain
+Ki   = 0.043           ;% Integral gain
+Kd   = 0.05              ;% Derivative gain
 
 
 a   = -H/(m*cp)       ;
 b   =  1/(m*cp)       ;
-a = a*10000; b = b*10000;  % disse var veldig små, systemet ville ikke gjøre noe
+%a = a*10000; b = b*10000;  % disse var veldig små, systemet ville ikke gjøre noe
 c   =  H/(m*cp)*Tomg  ;
 
 tau = - 1/a           ;
