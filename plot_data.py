@@ -32,7 +32,7 @@ D = np.array(df.D)
 T_målt_filtrert = np.array(df.T_målt_filtrert)
 T_real = np.array(df.T_real)
 
-
+"""
 # Plot the data
 plt.plot(t, T_real, label='Temperatur')
 plt.plot(t, U, label='U')
@@ -41,7 +41,14 @@ plt.plot(t, T_målt, label='T_målt')
 plt.plot(t, T_a, label='T_a')
 plt.plot(t, D, label='D')
 plt.plot(t, T_målt_filtrert, label='T_målt_filtrert')
+"""
 
+plt.plot(t, T_a, label=f'Satt temperatur {T_a[-1]:.2f}')
+plt.plot(t, T_målt, label='Målt temperatur med målestøy', alpha = 0.5)
+plt.plot(t, T_målt_filtrert, label='Filtrert måling')
+plt.plot(t, T_real, label='Faktisk temperatur')
+
+plt.ylim(19, None)
 plt.legend()
 plt.xlabel('Index')
 plt.ylabel('Values')
